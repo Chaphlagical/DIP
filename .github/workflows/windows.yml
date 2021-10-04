@@ -22,6 +22,7 @@ jobs:
     runs-on: "${{ matrix.platform }}-latest"
     steps:
       - uses: actions/checkout@v2
+      - uses: Dovyski/setup-opencv-action@v1
         with:
           submodules: "recursive"
           opencv-version: '4.0.0'
