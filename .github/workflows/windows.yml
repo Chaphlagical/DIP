@@ -29,15 +29,21 @@ jobs:
         run: git clone https://github.com/opencv/opencv
 
       - name: Configure OpenCV
-        run: cmake -H"." -B"build/${{ matrix.platform }}"
+        run: cmake -H"." -B"build/${{ matrix.platform }}" -DCMAKE_INSTALL_PREFIX=install
         working-directory: ./Homework/opencv
       
-      
-      - name: Check
-        run: ls
+      - name: Build OpenCV
+        run: cmake --build "build/${{ matrix.platform }}" --target INSTALL --config ${{ matrix.build_type }} ${{ env.PARALLEL }}
+        working-directory: ./Homework/opencv
+
+      - name: Set OpenCV path
+        run: ./setup_vars_opencv4.cmd
+        working-directory: ./Homework/opencv/build
 
       - name: Configure
         run: cmake -H"." -B"build/${{ matrix.platform }}"
+        working-directory: ./Homework/opencv
 
       - name: "Build ${{ matrix.platform }} in ${{ matrix.build_type }}"
         run: cmake --build "build/${{ matrix.platform }}" --target ALL_BUILD --config ${{ matrix.build_type }} ${{ env.PARALLEL }}
+        working-directory: ./Homework/opencv
