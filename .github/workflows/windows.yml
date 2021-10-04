@@ -28,8 +28,7 @@ jobs:
       - name: setup opencv
         uses: Dovyski/setup-opencv-action@v1
         with:
-          opencv-version: '4.0.0'
-          GENERATE_PKGCONFIG: ON
+          opencv-version: '4.5.3'
       
       - name: Check
         run: ls
