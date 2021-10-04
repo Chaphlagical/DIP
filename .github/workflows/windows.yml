@@ -25,19 +25,13 @@ jobs:
         with:
           submodules: "recursive"
 
-      - name: Cache OpenCV
-        id: opencv-cache
-        uses: actions/cache@v2
-        with:
-          path: ./opencv-install
-          key: ${{ runner.os }}-opencv-cache
+      - name: Clone OpenCV
+        run: git clone https://github.com/opencv/opencv
 
-      - name: Install OpenCV
-        uses: rayandrews/with-opencv-action@v1
-        with:  
-          dir: ./opencv-install
-          cached: ${{ steps.opencv-cache.outputs.cache-hit }}
-          opencv-version: '4.0.0'
+      - name: Configure OpenCV
+        run: cmake -H"." -B"build/${{ matrix.platform }}"
+        working-directory: ./Homework/opencv
+      
       
       - name: Check
         run: ls
