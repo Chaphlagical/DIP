@@ -7,30 +7,42 @@
 >
 > **Webpage**: http://staff.ustc.edu.cn/~lgliu/Courses/DIP_2021_autumn-winter/default.htm
 
-## Build
+Platform:
 
+* Windows 10
 * Visual Studio 2019
-* CMake >= 3.14
+* CMake >=3.14.0
 
-```
+Setup OpenCV
+
+* Download from official website: [https://opencv.org/](https://opencv.org/)
+* Install OpenCV
+* Add `opencv-path/build/x64/vc15/bin` to system path
+* Create system variable:
+  * name: `OpenCV_DIR`
+  * value: `opencv-path/build`
+
+Clone project:
+
+```sh
 git clone https://github.com/Chaphlagical/DIP --recursive
 ```
 
-`Configure`, `Generate`, and run `Homework`
+Then, you can use CMake to build the project.
 
 ## Assignment
 
 ### Homework#1: Color Editing
 
-[**Color Transfer**](https://www.cs.tau.ac.il/~turkel/imagepapers/ColorTransfer.pdf)
+**Color Transfer**
 
 ![](./images/color_transfer.png)
 
-[**Colorization**](http://www3.cs.stonybrook.edu/~mueller/research/colorize/)
+**Colorization**
 
 ![](./images/colorization.png)
 
-### Homework#2 ImageWarping
+### Homework#2 Image Warping
 
 ![](./images/image_warping.png)
 
