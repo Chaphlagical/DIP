@@ -32,7 +32,6 @@ namespace Chaf
 		if (m_image && !m_src_points.empty() && m_updated)
 		{
 			mask = m_solver->warp(*m_image, *m_result, m_src_points, m_dst_points);
-			//cv::flip(m_result->getImage(), m_result->getImage(), 0);
 			m_result = CreateRef<Image>(m_result->getImage());
 			m_updated = false;
 		}
