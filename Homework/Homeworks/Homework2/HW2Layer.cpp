@@ -97,6 +97,11 @@ namespace Chaf
 			m_solver->fix(*m_result, mask);
 			m_result = CreateRef<Image>(m_result->getImage());
 		}
+		ImGui::SameLine();
+		if (m_result && ImGui::Button("Save"))
+		{
+			m_result->save("result.png");
+		}
 
 		ImGui::Columns(2, "Homework1");
 

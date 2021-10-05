@@ -8,6 +8,7 @@ include(Init)
 Init_Project()
 
 find_package(OpenCV REQUIRED)
+find_package(OpenMP REQUIRED)
 
 add_subdirectory(Base)
 add_subdirectory(Framework)

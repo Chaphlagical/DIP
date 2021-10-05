@@ -13,4 +13,5 @@ SetTarget(
         Editor
         implot
         opencv_core
+        OpenMP::OpenMP_CXX
 )
