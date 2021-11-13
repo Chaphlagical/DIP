@@ -15,7 +15,10 @@ Platform:
 
 Setup OpenCV
 
-* Download from official website: [https://opencv.org/](https://opencv.org/)
+* Clone OpenCV source code from: [https://github.com/opencv/opencv](https://github.com/opencv/opencv)
+* Clone OpenCV's extra modules source code from: [https://github.com/opencv/opencv_contrib](https://github.com/opencv/opencv_contrib)
+
+* Build OpenCV with extra modules
 * Install OpenCV
 * Add `opencv-path/build/x64/vc15/bin` to system path
 * Create system variable:
@@ -45,4 +48,12 @@ Then, you can use CMake to build the project.
 ### Homework#2 Image Warping
 
 ![](./images/image_warping.png)
+
+## Homework#3 Poisson Image Editing  
+
+![](./images/poisson.jpg)
+
+## Homework#4 Upsampling & Downsampling
+
+![](./images/updownsampling.png)
 

@@ -26,7 +26,7 @@ namespace Chaf
 
 	void HW1Layer::OnImGuiRender()
 	{
-		EditorBasic::GetFileDialog("Select Source Image", ".png,.jpg,.bmp,.jpeg", [this](const std::string& path) {
+		EditorBasic::GetFileDialog("Homework1##Select Source Image", ".png,.jpg,.bmp,.jpeg", [this](const std::string& path) {
 			if (!m_source)
 			{
 				m_source = CreateRef<Image>(path);
@@ -42,7 +42,7 @@ namespace Chaf
 			}
 			});
 
-		EditorBasic::GetFileDialog("Select Target Image", ".png,.jpg,.bmp,.jpeg", [this](const std::string& path) {
+		EditorBasic::GetFileDialog("Homework1##Select Target Image", ".png,.jpg,.bmp,.jpeg", [this](const std::string& path) {
 			if (!m_target)
 			{
 				m_target = CreateRef<Image>(path);
@@ -65,7 +65,7 @@ namespace Chaf
 		ImGui::PushID(0);
 		if (ImGui::Button("Load"))
 		{
-			EditorBasic::SetPopupFlag("Select Source Image");
+			EditorBasic::SetPopupFlag("Homework1##Select Source Image");
 		}
 		ImGui::SameLine();
 		if (ImGui::Button("Clear"))
@@ -85,7 +85,7 @@ namespace Chaf
 		ImGui::PushID(1);
 		if (ImGui::Button("Load"))
 		{
-			EditorBasic::SetPopupFlag("Select Target Image");
+			EditorBasic::SetPopupFlag("Homework1##Select Target Image");
 		}
 		ImGui::SameLine();
 		if (ImGui::Button("Clear"))

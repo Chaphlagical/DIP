@@ -34,10 +34,6 @@ namespace Chaf
 		std::string m_path = "";
 		
 		GLuint m_texture_id;
-		cv::Mat m_image;
-
-		uint32_t m_width = 0;
-		uint32_t m_height = 0;
-		
+		cv::Mat m_image;		
 	};
 }

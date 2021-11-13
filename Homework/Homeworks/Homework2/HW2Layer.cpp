@@ -38,7 +38,7 @@ namespace Chaf
 	}
 	void HW2Layer::OnImGuiRender()
 	{
-		EditorBasic::GetFileDialog("Select Image", ".png,.jpg,.bmp,.jpeg", [this](const std::string& path) {
+		EditorBasic::GetFileDialog("Homework2##Select Image", ".png,.jpg,.bmp,.jpeg", [this](const std::string& path) {
 			if (!m_image)
 			{
 				m_image = CreateRef<Image>(path);
@@ -56,7 +56,7 @@ namespace Chaf
 
 		if (ImGui::Button("Load Image"))
 		{
-			EditorBasic::SetPopupFlag("Select Image");
+			EditorBasic::SetPopupFlag("Homework2##Select Image");
 		}
 		ImGui::SameLine();
 		if (ImGui::RadioButton("IDW", is_idw))
@@ -103,7 +103,7 @@ namespace Chaf
 			m_result->save("result.png");
 		}
 
-		ImGui::Columns(2, "Homework1");
+		ImGui::Columns(2, "Homework2");
 
 		show_texture(m_image, "image");
 

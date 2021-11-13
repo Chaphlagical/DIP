@@ -32,9 +32,6 @@ namespace Chaf
 
 		m_path = path;
 
-		m_width = m_image.cols;
-		m_height = m_image.rows;
-
 		// Load from file
 		unsigned char* image_data = Mat_to_Byte(m_image);
 
@@ -58,9 +55,6 @@ namespace Chaf
 	Image::Image(const cv::Mat& image)
 	{
 		m_image = image.clone();
-
-		m_width = m_image.cols;
-		m_height = m_image.rows;
 
 		// Load from file
 		unsigned char* image_data = Mat_to_Byte(m_image);
@@ -105,12 +99,12 @@ namespace Chaf
 
 	const uint32_t Image::getWidth() const
 	{
-		return m_width;
+		return m_image.cols;
 	}
 
 	const uint32_t Image::getHeight() const
 	{
-		return m_height;
+		return m_image.rows;
 	}
 
 	const std::string& Image::getPath() const
