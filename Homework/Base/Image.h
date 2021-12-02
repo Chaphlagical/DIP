@@ -32,8 +32,8 @@ namespace Chaf
 
 	private:
 		std::string m_path = "";
-		
-		GLuint m_texture_id;
-		cv::Mat m_image;		
+
+		GLuint m_texture_id = 0;
+		cv::Mat m_image;
 	};
 }
