@@ -57,3 +57,7 @@ Then, you can use CMake to build the project.
 
 ![](./images/updownsampling.png)
 
+## Homework#5 Seam Carving
+
+![image-20211206163408977](images/seam_carving.png)
+
