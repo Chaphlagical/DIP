@@ -61,3 +61,7 @@ Then, you can use CMake to build the project.
 
 ![image-20211206163408977](images/seam_carving.png)
 
+## Homework#6 NSFW Classification
+
+![5](images/nsfw.png)
+
